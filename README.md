@@ -56,7 +56,7 @@ By using this framework which instantiates product interest, competition, uses, 
 
  Pseudo-code functions exist in the file that could be outfit for paid apis like SERP volume monitoring.
 
- ![Report on marketplace trends related to your product](.\docs\producttrends.gif)
+ ![Report on marketplace trends related to your product](./docs/producttrends.gif)
 
 ## plots.py
 
@@ -78,7 +78,7 @@ To leverage Google's custom search api use the following documentation below.
 
 The functions in this file also allow a user to download content from serps and save file, text, images, and tables within the `/docs` directory.
 
- ![Collect your product's data from search engine results pages](.\docs\serpsandpdfs.gif)
+ ![Collect your product's data from search engine results pages](./docs/serpsandpdfs.gif)
 
 ### Setting the Product class' serp.py methods
  Information found on Google's search engine results page can be an invaluable source of information about our product, it's competitors, and content associated with it.
@@ -141,3 +141,5 @@ The second function...
 ... loops through the dictionary's items and formats them into a structured dictionary using the unique_key set as a schema. If a record does not contain items matching a string in the set, then it will record that value as None.
 
 With this d_schema dictionary, the `send_to_bq.py` file simply formats important keys first in a dataframe and sends that dataframe to the BigQuery table you designate.
+
+Enjoy!

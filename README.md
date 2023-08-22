@@ -1,10 +1,11 @@
 # The Product Data Class
 
-The `Product` data structure allows you to instantiate a product record from your internal product database.
+This repository offers an object-oriented framework for handling internal product information. 
 
-This data structure leverages predefined algorithms to allow you to quickly access beneficial information about the product in the global marketplace.
+Two approaches in this repository offer modular and scalable additions to product-centric methods/algorithms.
 
-By using this framework which instantiates product interest, competition, uses, and your own internal algorithms, you can optimize your product assortment efficiently.
+1. product initialization using your configurable, internal sql in a Class object
+2. algorithmic methods found in themed python files that can be imported into the Class object 
 
 The Product object exists in this `/src` directory which lives within the following folder structure:
 
@@ -41,10 +42,45 @@ The Product object exists in this `/src` directory which lives within the follow
 
  ## Product.py
 
+The `Product` data structure allows you to instantiate a product record from your internal product database.
+
+This data structure leverages predefined algorithms to allow you to quickly access beneficial information about the product in the global marketplace.
+
+By using this framework which instantiates product interest, competition, uses, and your own internal algorithms, you can optimize your product assortment efficiently.
+
  ## trends.py
+
+ `trends.py` contains Product instance and staticmethods to display marketplace trends with ease.
+
+ Currently, methods leverage open source apis.
+
+ Pseudo-code functions exist in the file that could be outfit for paid apis like SERP volume monitoring.
+
+ ![Report on marketplace trends related to your product](.\docs\producttrends.gif)
+
+## plots.py
+
+`plots.py` saves helpful staticmethods that allow you to visualize DataFrames found in your product's instance.
+
+## content.py
+
+`content.py` contains staticmethods that allow you to access large language models for text summarization and more.
+
+You will need to install Pytorch on your machine to leverage the open source models provided by Huggingface that are included in this file.
+
+Pseudo-code functions exist for paid apis like OpenAI as well.
 
  ## serps.py
 
+`serps.py` contains Product instance and staticmethods to collect your product instance's search engine result page's competition and position.
+
+To leverage Google's custom search api use the following documentation below.
+
+The functions in this file also allow a user to download content from serps and save file, text, images, and tables within the `/docs` directory.
+
+ ![Collect your product's data from search engine results pages](.\docs\serpsandpdfs.gif)
+
+### Setting the Product class' serp.py methods
  Information found on Google's search engine results page can be an invaluable source of information about our product, it's competitors, and content associated with it.
 
  In order to collect information about your product using Google SERP information, I leverage `advertools`' `serp_goog()` method.
@@ -55,7 +91,7 @@ The Product object exists in this `/src` directory which lives within the follow
 
  For more information, this article was very helpful: [Data Science for SEO](https://www.holisticseo.digital/python-seo/data-science/)
 
- ### Setup a Custom Search API Key
+ #### Setup a Custom Search API Key
 
  Navigate to your GCP Project dashboard.
 
@@ -65,7 +101,7 @@ The Product object exists in this `/src` directory which lives within the follow
 
  From the Credentials page > Select Create Credentials > API key > copy your api key to the SE_API_KEY config variable. Don't share this with anyone/leave it in your public repository.
 
- ### Setup a Programmable Search Engine ID 
+ #### Setup a Programmable Search Engine ID 
 
  Navigate to [Google's Programmable Search Engine](https://programmablesearchengine.google.com/controlpanel/all) offering.
 
@@ -73,7 +109,10 @@ The Product object exists in this `/src` directory which lives within the follow
 
  Copy your Search Engine ID from the URL provided (src="https://cse.google.com/cse.js?cx=`SE_ID`") into your `SE_ID` config variable.
 
-# Preprocess Product Data - Setting up a Product Dimension Table in Google BigQuery
+
+<br><br><br>
+
+# (Data Warehouse Prerequisite) Preprocess Product Data - Setting up a Product Dimension Table in Google BigQuery
 
 Your organization will likely have an internal table that's primary purpose is to store product dimension data.
 

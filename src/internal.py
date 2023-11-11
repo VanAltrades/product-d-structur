@@ -29,6 +29,9 @@ def get_product_ranked_attributes():
     """
     return
 
+def get_product_attributes():
+    return
+
 def get_product_internal_search_terms():
     return
 
@@ -36,4 +39,10 @@ def get_product_search_console_keywords():
     return
 
 def get_product_search_console_metrics():
+    return
+
+def get_product_paid_search_keywords():
+    return
+
+def get_product_paid_search_metrics():
     return
